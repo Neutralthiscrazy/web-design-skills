@@ -27,14 +27,21 @@ the upstream terms govern.
 - **License**: MIT (declared in upstream SKILL.md frontmatter; upstream repo
   has no top-level LICENSE file)
 - **Vendored commit**: pin to `main` branch at vendoring time
-- **Description** (from upstream frontmatter — `name` field is
-  `vercel-react-practices` in upstream, retained as-is for fidelity):
+- **Description** (from upstream frontmatter — `name` field is renamed
+  `vercel-react-best-practices` → `react-best-practices`, see note below):
   > React and Next.js performance optimization guidelines from Vercel
   > Engineering. This skill should be used when writing, reviewing, or
   > refactoring React/Next.js code to ensure optimal performance patterns.
 - **Note**: Upstream repo also contains 12 other skills (web-design-guidelines,
   vercel-cli-with-tokens, vercel-optimize, react-native-skills, deploy-to-vercel,
   etc.); we vendor only `react-best-practices` to keep the pack focused.
+- **Modification exception**: we rename `name:` in the frontmatter from
+  `vercel-react-best-practices` (upstream value) to `react-best-practices`
+  to satisfy the OpenCode rule "frontmatter `name:` MUST match the
+  directory name containing `SKILL.md`". This is the **only** modification
+  we make to a vendored file in any of our packs and is documented here
+  so any future re-sync can re-apply this rename: `sed -i 's/^name:
+  vercel-react-best-practices$/name: react-best-practices/'`
 
 ### `web-design-guidelines/SKILL.md`
 
