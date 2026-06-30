@@ -1,5 +1,44 @@
 # web-design-skills
 
+> ## ⚠️ DEPRECATED — 2026-06-30
+>
+> This curated 5-skill wrapper is **no longer the recommended install path**.
+> The FunPay wizard now installs each skill from its upstream source directly,
+> catching the companion files we silently dropped when this repo first
+> shipped (rules/ for vercel-labs/react-best-practices, references/ and
+> scripts/ for janjaszczak/vanilla-web, AGENTS.md / LICENSE.txt /
+> metadata.json for anthropics/frontend-design).
+>
+> Run these instead (one `npx skills add` per upstream source):
+>
+> ```bash
+> npx -y skills add anthropics/skills           --skill frontend-design          -g -a <agent>
+> npx -y skills add vercel-labs/agent-skills    --skill react-best-practices      -g -a <agent>
+> npx -y skills add vercel-labs/agent-skills    --skill web-design-guidelines     -g -a <agent>
+> npx -y skills add janjaszczak/cursor          --skill vanilla-web               -g -a <agent>
+> npx -y skills add mastepanoski/claude-skills  --skill wcag-accessibility-audit  -g -a <agent>
+> ```
+>
+> This repo is preserved for historical reference. Last HEAD (`9ce6704`)
+> holds the original 5 SKILL.md (one per upstream name). We will NOT re-sync
+> downstream — the upstream repos are now the source of truth and ship their
+> own updates independently.
+>
+> ---
+>
+> ### Quick install (deprecated — see warning above)
+>
+> ```bash
+> # Claude Code
+> npx skills add Neutralthiscrazy/web-design-skills -g -a claude-code -y
+>
+> # OpenCode
+> npx skills add Neutralthiscrazy/web-design-skills -g -a opencode -y
+>
+> # Codex
+> npx skills add Neutralthiscrazy/web-design-skills -g -a codex -y
+> ```
+
 A focused pack of **5 web and UI design skills** for AI coding agents
 (Claude Code, OpenCode, Codex, Cursor, etc.). One `npx skills add` command
 installs the whole pack.
